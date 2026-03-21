@@ -1,0 +1,53 @@
+{
+  "_comment": "Claude Code settings template. Copy to ~/.claude/settings.json and customize.",
+
+  "apiKeyHelper": "bash ~/.claude/zenmux-switcher.sh",
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://zenmux.ai/api/anthropic",
+    "ANTHROPIC_MODEL": "anthropic/claude-opus-4.6"
+  },
+
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "WebFetch(*)",
+      "WebSearch",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Glob(*)",
+      "Grep(*)"
+    ],
+    "defaultMode": "bypassPermissions",
+    "additionalDirectories": [
+      "~/Library/LaunchAgents",
+      "~/.claude"
+    ]
+  },
+
+  "model": "anthropic/claude-opus-4.6",
+
+  "extraKnownMarketplaces": {
+    "omc": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
+      }
+    },
+    "superpowers-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers-marketplace"
+      }
+    }
+  },
+
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  },
+
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
+  }
+}

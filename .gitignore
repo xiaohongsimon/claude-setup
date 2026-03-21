@@ -1,0 +1,12 @@
+# Secrets
+*.key
+*.secret
+zenmux-active
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
