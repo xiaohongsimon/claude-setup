@@ -3,6 +3,13 @@
 *.secret
 zenmux-active
 
+# Claude Code settings template - DO NOT commit secrets
+settings.json
+
+# .env files
+*.env
+.dynasty.env
+
 # OS
 .DS_Store
 Thumbs.db

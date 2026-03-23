@@ -1,86 +1,107 @@
-# Claude Code Setup
+# Dotfiles / Claude Code Setup
 
-My Claude Code configuration: skills, scripts, and settings templates.
+我的 macOS 开发环境配置 / My macOS development environment setup.
 
 An algorithm team TL's approach to turning a Mac Studio into a 24/7 AI development hub.
 
-## What's Inside
+## What's Inside / 包含内容
 
 ```
 claude-setup/
-├── skills/                          # Reusable skills (copy to ~/.claude/skills/)
-│   └── presentation-as-code/        # Interactive HTML presentation methodology
-├── scripts/                         # Utility scripts (copy to ~/.claude/)
-│   ├── statusline.sh                # Context window usage display
-│   └── zenmux-switcher.sh           # Multi-account API key switching
-├── templates/                       # Configuration templates
-│   └── settings.json                # Settings reference (sanitized)
-└── plugins.md                       # Plugin recommendations
+├── .claude/                       # Claude Code 配置
+│   ├── commands/                  # 模型切换命令
+│   │   └── zenmux*.md             # Zenmux/百炼模型切换
+│   ├── skills/                    # 自定义技能
+│   │   ├── notebooklm/            # Google NotebookLM 集成
+│   │   ├── planning-with-files/   # 文件式任务规划
+│   │   └── presentation-as-code/  # HTML 演示文稿生成
+│   ├── notify-dingtalk.sh         # 钉钉通知脚本
+│   └── settings.json.template     # 配置模板（不含密钥）
+├── ghostty/
+│   └── config                     # Ghostty 终端配置
+├── claude-hud/
+│   └── README.md                  # HUD 插件安装说明
+├── install.sh                     # 安装脚本
+└── README.md                      # 本文件
 ```
 
-## Quick Start
+## Quick Start / 快速开始
 
-### 1. Install Skills
+### 1. 克隆配置
 
 ```bash
-# Copy all skills
-cp -r skills/* ~/.claude/skills/
-
-# Or just one
-cp -r skills/presentation-as-code ~/.claude/skills/
+git clone https://github.com/xiaohongsimon/claude-setup.git ~/dotfiles
+cd ~/dotfiles
+./install.sh
 ```
 
-### 2. Install Scripts
+### 2. 安装插件 (在 Claude Code 中)
 
 ```bash
-cp scripts/statusline.sh ~/.claude/
-chmod +x ~/.claude/statusline.sh
+/install claude-hud@jarrodwatts
+/install superpowers@claude-plugins-official
 ```
 
-### 3. Configure Settings
+## Components / 组件说明
 
-Copy `templates/settings.json` to `~/.claude/settings.json` and fill in your own values.
+### Ghostty
+
+终端模拟器配置：
+- Catppuccin Mocha 主题
+- JetBrainsMono Nerd Font 字体
+- macOS 标题栏样式（tabs）
+- 快速终端切换（Cmd+`）
+
+### Claude Code
+
+AI 编程助手配置：
+- 自定义 skills（notebooklm, planning-with-files, presentation-as-code）
+- 模型切换命令（zenmux1/2, glm5, kimi25, minimax25, qwen35plus）
+- 钉钉通知脚本
+
+### Claude HUD
+
+使用 [claude-hud](https://github.com/jarrodwatts/claude-hud) 插件，通过 Claude Code 插件系统安装。
 
 ## Skills
 
 ### presentation-as-code
 
-A methodology for creating high-impact, interactive HTML presentations with AI.
+创建高影响力、交互式 HTML 演示文稿的方法论：
+- 5 阶段工作流：Narrative → Design System → Content → Interactivity → Polish
+- 已在 35+ 页非技术性培训幻灯片中验证
+- 离线优先，无框架依赖
 
-- 5-phase workflow: Narrative → Design System → Content → Interactivity → Polish
-- Proven on 35+ slide training deck for non-technical audience
-- Offline-first, zero framework dependency
-- Includes component library and design system reference
+详见 [skills/presentation-as-code/README-zh.md](.claude/skills/presentation-as-code/README-zh.md)。
 
-See [skills/presentation-as-code/README-zh.md](skills/presentation-as-code/README-zh.md) for Chinese documentation.
+### planning-with-files
+
+基于文件的任务规划系统，生成：
+- `task_plan.md` - 任务分解
+- `findings.md` - 调研记录
+- `progress.md` - 进度追踪
+
+### notebooklm
+
+Google NotebookLM 集成，支持：
+- 直接查询 notebooks
+- 返回带引用的答案
+- 减少幻觉
 
 ## Scripts
 
-### statusline.sh
+### notify-dingtalk.sh
 
-Shows model name + context window usage in your terminal status line.
+Claude Code 事件 → 钉钉单聊推送：
+- 从 transcript 提取上下文
+- 免打扰时段：23:30 ~ 07:30
+- 密钥从 `~/.dynasty.env` 加载
 
-```
-🟢 [Claude Opus 4.6] ▓▓▓▓░░░░░░░░░░░░░░░░ 20%
-🟡 [Claude Opus 4.6] ▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░ 55%
-🔴 [Claude Opus 4.6] ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 85%
-```
+## Dependencies / 依赖
 
-### zenmux-switcher.sh
-
-Switch between multiple Zenmux API accounts without restarting Claude Code.
-
-```bash
-# Switch to account 1
-echo 1 > ~/.claude/zenmux-active
-
-# Switch to account 2
-echo 2 > ~/.claude/zenmux-active
-```
-
-## Plugins
-
-See [plugins.md](plugins.md) for recommended plugins and marketplaces.
+- [Ghostty](https://ghostty.org/)
+- [Claude Code](https://claude.ai/code)
+- [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
 
 ## License
 
