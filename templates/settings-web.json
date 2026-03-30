@@ -1,0 +1,69 @@
+{
+  "_comment": "Claude Code Web (claude.ai/code) 专用配置模板。与 macOS 本地版的区别已标注。",
+
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://zenmux.ai/api/anthropic",
+    "ANTHROPIC_MODEL": "anthropic/claude-opus-4.6"
+  },
+
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "WebFetch(*)",
+      "WebSearch",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Glob(*)",
+      "Grep(*)"
+    ],
+    "defaultMode": "bypassPermissions",
+    "additionalDirectories": [
+      "~/.claude"
+    ]
+  },
+
+  "model": "anthropic/claude-opus-4.6",
+
+  "extraKnownMarketplaces": {
+    "omc": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode.git"
+      }
+    },
+    "superpowers-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers-marketplace"
+      }
+    }
+  },
+
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  },
+
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/claude-setup/scripts/web-session-setup.sh 2>&1 || true",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  },
+
+  "skipDangerousModePermissionPrompt": true,
+
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true,
+    "claude-hud@jarrodwatts": true
+  }
+}

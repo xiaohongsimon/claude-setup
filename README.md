@@ -4,6 +4,8 @@
 
 An algorithm team TL's approach to turning a Mac Studio into a 24/7 AI development hub.
 
+> **Web 用户?** 跳转到 [Web 端配置](#web-端配置claude-aicode) 查看如何在 claude.ai/code 上启用插件和 HUD。
+
 ## What's Inside / 包含内容
 
 ```
@@ -21,6 +23,13 @@ claude-setup/
 │   └── config                     # Ghostty 终端配置
 ├── claude-hud/
 │   └── README.md                  # HUD 插件安装说明
+├── scripts/
+│   ├── statusline.sh              # 状态栏脚本
+│   ├── zenmux-switcher.sh         # 多账号切换
+│   └── web-session-setup.sh       # Web session 自动配置
+├── templates/
+│   ├── settings.json              # macOS 本地配置模板
+│   └── settings-web.json          # Web 端 (claude.ai/code) 配置模板
 ├── install.sh                     # 安装脚本
 └── README.md                      # 本文件
 ```
@@ -96,6 +105,59 @@ Claude Code 事件 → 钉钉单聊推送：
 - 从 transcript 提取上下文
 - 免打扰时段：23:30 ~ 07:30
 - 密钥从 `~/.dynasty.env` 加载
+
+## Web 端配置（claude.ai/code）
+
+通过 Web 登录其他电脑使用 Claude Code 时，插件（HUD、superpowers 等）和 statusLine 默认不生效。原因：
+
+| 问题 | 原因 | 解决方式 |
+|------|------|----------|
+| HUD / statusLine 不显示 | node 路径 `/opt/homebrew/bin/node` 是 macOS 专属 | SessionStart hook 自动修复 |
+| 插件未加载 | Web session 无本地插件缓存 | 首次需手动 `/install` |
+| 路径不兼容 | `/Users/xxx/` 在 Linux 上不存在 | 自动替换为 `$HOME` |
+
+### 快速配置
+
+**方式一：使用 Web 专用模板（推荐）**
+
+```bash
+# 在 Web session 中克隆 repo
+git clone https://github.com/xiaohongsimon/claude-setup.git ~/claude-setup
+
+# 使用 Web 专用 settings
+cp ~/claude-setup/templates/settings-web.json ~/.claude/settings.json
+
+# 复制 statusline 脚本
+cp ~/claude-setup/scripts/statusline.sh ~/.claude/statusline.sh
+chmod +x ~/.claude/statusline.sh
+
+# 安装插件（在 Claude Code 中运行）
+# /install claude-hud@jarrodwatts
+# /install superpowers@claude-plugins-official
+```
+
+**方式二：手动运行 setup 脚本**
+
+```bash
+bash ~/claude-setup/scripts/web-session-setup.sh
+```
+
+### SessionStart Hook 自动化
+
+`templates/settings-web.json` 已包含 SessionStart hook，每次 Web session 启动时自动：
+- 修复 node 路径（macOS → Linux）
+- 修复 `additionalDirectories` 路径
+- 复制 statusline.sh 到 `~/.claude/`
+- 检查插件状态并提示安装
+
+### 插件兼容性
+
+| 插件 | Web 兼容 | 备注 |
+|------|----------|------|
+| superpowers | ✅ | 首次需 `/install` |
+| claude-hud | ✅ | 需要 node.js，首次需 `/install` |
+| statusline.sh | ✅ | 需要 jq，setup 脚本自动安装 |
+| 钉钉通知 | ⚠️ | 需要 `~/.dynasty.env` 密钥文件 |
 
 ## Dependencies / 依赖
 
