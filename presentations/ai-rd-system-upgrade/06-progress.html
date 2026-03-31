@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI原生研发体系升级 — 当前进展</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== Section Break ====== -->
+  <section class="slide section-break">
+    <div class="section-number">06</div>
+    <span class="tag tag-progress">进展</span>
+    <h2>当前进展与<span class="gradient-teal">信心依据</span></h2>
+    <p class="subtitle">2分钟</p>
+  </section>
+
+  <!-- ====== SLIDE: Team Progress ====== -->
+  <section class="slide">
+    <span class="tag tag-progress">实质进展</span>
+    <h2>各团队<span class="gradient-teal">关键成果</span></h2>
+
+    <div class="card-grid cols-2" style="margin-top: 24px;">
+      <div class="card card-accent-top" style="border-top-color: var(--accent-green);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h4 style="color: var(--accent-green);">生活缴费</h4>
+          <span class="text-sm text-muted">Rust重构替代遗留Java系统</span>
+        </div>
+        <div style="display: flex; gap: 24px; margin-top: 16px;">
+          <div style="text-align: center;">
+            <div class="big-number" style="color: var(--accent-green); font-size: 2em;">7.3万行</div>
+            <p class="text-sm text-muted">替代48万行Java</p>
+          </div>
+          <div style="text-align: center;">
+            <div class="big-number" style="color: var(--accent-green); font-size: 2em;">85%</div>
+            <p class="text-sm text-muted">代码压缩比</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-accent-top" style="border-top-color: var(--accent-blue);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h4 style="color: var(--accent-blue);">就业</h4>
+          <span class="text-sm text-muted">架构约束Linter + 场景用例覆盖</span>
+        </div>
+        <div style="display: flex; gap: 24px; margin-top: 16px;">
+          <div style="text-align: center;">
+            <div class="big-number" style="color: var(--accent-blue); font-size: 2em;">80+</div>
+            <p class="text-sm text-muted">Linter发现的问题</p>
+          </div>
+          <div style="text-align: center;">
+            <div class="big-number" style="color: var(--accent-blue); font-size: 2em;">44.6%</div>
+            <p class="text-sm text-muted">场景用例覆盖率</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-accent-top" style="border-top-color: var(--accent-purple);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h4 style="color: var(--accent-purple);">物流</h4>
+          <span class="text-sm text-muted">OpenSpec全链路贯通</span>
+        </div>
+        <p style="margin-top: 12px;">跑通"碰一下"全链路：<strong>需求→系分→代码→CI→发布评估</strong></p>
+      </div>
+
+      <div class="card card-accent-top" style="border-top-color: var(--accent-gold);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h4 style="color: var(--accent-gold);">出行</h4>
+          <span class="text-sm text-muted">SDD-RIPER + Skill模式实战验证</span>
+        </div>
+        <p style="margin-top: 12px;">跑通真实业务需求，<strong>各项目推广中</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Maturity Matrix ====== -->
+  <section class="slide">
+    <span class="tag tag-progress">成熟度矩阵</span>
+    <h2>能力<span class="gradient-teal">成熟度矩阵</span></h2>
+
+    <table style="margin-top: 24px;">
+      <thead>
+        <tr>
+          <th>能力维度</th>
+          <th style="text-align: center;">就业</th>
+          <th style="text-align: center;">生活缴费</th>
+          <th style="text-align: center;">出行</th>
+          <th style="text-align: center;">物流</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>上下文工程</strong></td>
+          <td style="text-align: center;"><span class="maturity-icon status-wip">🔄</span></td>
+          <td style="text-align: center;"><span class="maturity-icon status-wip">🔄</span></td>
+          <td style="text-align: center;"><span class="maturity-icon status-done">✅</span></td>
+          <td style="text-align: center;"><span class="maturity-icon status-wip">🔄</span></td>
+        </tr>
+        <tr>
+          <td><strong>架构约束</strong></td>
+          <td style="text-align: center;"><span class="maturity-icon status-done">✅</span></td>
+          <td style="text-align: center;"><span class="maturity-icon status-wip">🔄</span></td>
+          <td style="text-align: center;"><span class="maturity-icon status-wip">🔄</span></td>
+          <td style="text-align: center;"><span class="maturity-icon status-wip">🔄</span></td>
+        </tr>
+        <tr>
+          <td><strong>反馈循环</strong></td>
+          <td style="text-align: center;"><span class="maturity-icon status-done">✅</span></td>
+          <td style="text-align: center;"><span class="maturity-icon status-wip">🔄</span></td>
+          <td style="text-align: center;"><span class="maturity-icon status-wip">🔄</span></td>
+          <td style="text-align: center;"><span class="maturity-icon status-done">✅</span></td>
+        </tr>
+        <tr>
+          <td><strong>生命周期管理</strong></td>
+          <td style="text-align: center;"><span class="maturity-icon status-wip">🔄</span></td>
+          <td style="text-align: center;"><span class="maturity-icon status-wip">🔄</span></td>
+          <td style="text-align: center;"><span class="maturity-icon status-wip">🔄</span></td>
+          <td style="text-align: center;"><span class="maturity-icon status-wip">🔄</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card-grid cols-3" style="margin-top: 24px;">
+      <div class="highlight-box" style="margin: 0;">
+        <p class="text-sm"><strong>洞察1：</strong>没有任何一条线完成全部四维度——恰恰说明需要<strong>体系化推进</strong></p>
+      </div>
+      <div class="highlight-box gold" style="margin: 0;">
+        <p class="text-sm"><strong>洞察2：</strong>"生命周期管理"全线未完成，是当前<strong>最短的板</strong>——需要组织级基建投入</p>
+      </div>
+      <div class="highlight-box green" style="margin: 0;">
+        <p class="text-sm"><strong>洞察3：</strong>各线在不同维度领先，有<strong>交叉学习</strong>空间</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Navigation ====== -->
+  <section class="slide" style="min-height: auto; padding: 40px 100px;">
+    <div class="nav-footer" style="border-top: none;">
+      <a href="05-roadmap.html">← 怎么做</a>
+      <a href="07-action-risk.html">行动与风险 →</a>
+    </div>
+  </section>
+
+  <script src="slides.js"></script>
+</body>
+</html>

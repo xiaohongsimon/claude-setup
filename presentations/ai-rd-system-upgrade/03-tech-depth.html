@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI原生研发体系升级 — 技术纵深</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== Section Break ====== -->
+  <section class="slide section-break">
+    <div class="section-number">03</div>
+    <span class="tag tag-tech">技术纵深</span>
+    <h2>工程感知、Multi-Agent<br>与<span class="gradient-cyan">质量体系</span></h2>
+    <p class="subtitle">3分钟</p>
+  </section>
+
+  <!-- ====== SLIDE: Engineering Perception ====== -->
+  <section class="slide">
+    <span class="tag tag-tech">工程感知中枢</span>
+    <h2>智能体集群的<span class="gradient-cyan">"共享内存"</span></h2>
+    <p class="subtitle">单一文件的上下文限制是AI处理复杂遗留系统的最大障碍</p>
+
+    <div class="card-grid cols-3" style="margin-top: 20px;">
+      <div class="card card-accent-left" style="border-left-color: var(--accent-cyan);">
+        <h4>函数级语义表征</h4>
+        <p class="text-sm">捕获逻辑细节</p>
+        <p class="text-sm" style="color: var(--accent-cyan); margin-top: 8px;">精准定位代码逻辑</p>
+      </div>
+      <div class="card card-accent-left" style="border-left-color: var(--accent-blue);">
+        <h4>模块与架构级语义表征</h4>
+        <p class="text-sm">识别跨文件的调用链与依赖拓扑</p>
+        <p class="text-sm" style="color: var(--accent-blue); margin-top: 8px;">理解系统架构</p>
+      </div>
+      <div class="card card-accent-left" style="border-left-color: var(--accent-purple);">
+        <h4>蒙特卡洛项目感知优化</h4>
+        <p class="text-sm">大模型预判Issue与代码Chunk关联度</p>
+        <p class="text-sm" style="color: var(--accent-purple); margin-top: 8px;">缺陷定位错误率降低 <strong>17%</strong></p>
+      </div>
+    </div>
+
+    <div class="highlight-box cyan" style="margin-top: 20px;">
+      <strong>MCP全链路工具链：</strong>实时终端感知 + 跨文件全路径感知 + 基于RAG的知识自动化召回
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Multi-Agent Architecture ====== -->
+  <section class="slide">
+    <span class="tag tag-tech">Multi-Agent协同</span>
+    <h2>从L2到L3的关键：<span class="gradient-cyan">多Agent协同</span></h2>
+
+    <div class="card-grid cols-4" style="margin-top: 24px;">
+      <div class="card card-accent-top" style="border-top-color: var(--accent-green); text-align: center;">
+        <h4 style="color: var(--accent-green);">产品Agent</h4>
+        <p class="text-sm">需求细化、用例拆解</p>
+        <div class="divider"></div>
+        <p class="text-sm text-muted">为架构Agent提供业务边界</p>
+      </div>
+      <div class="card card-accent-top" style="border-top-color: var(--accent-blue); text-align: center;">
+        <h4 style="color: var(--accent-blue);">架构Agent</h4>
+        <p class="text-sm">技术选型、契约设计</p>
+        <div class="divider"></div>
+        <p class="text-sm text-muted">产出契约是测试与编码的唯一准绳</p>
+      </div>
+      <div class="card card-accent-top" style="border-top-color: var(--accent-purple); text-align: center;">
+        <h4 style="color: var(--accent-purple);">编码Agent</h4>
+        <p class="text-sm">代码实现、逻辑生成</p>
+        <div class="divider"></div>
+        <p class="text-sm text-muted">必须等待Interface Spec签字后启动</p>
+      </div>
+      <div class="card card-accent-top" style="border-top-color: var(--accent-gold); text-align: center;">
+        <h4 style="color: var(--accent-gold);">测试Agent</h4>
+        <p class="text-sm">脚本生成、自动验证</p>
+        <div class="divider"></div>
+        <p class="text-sm text-muted">基于契约并行生成Mock，先于编码完成验证准备</p>
+      </div>
+    </div>
+
+    <div class="highlight-box" style="margin-top: 20px;">
+      <strong>AI智能平台层治理：</strong>多模型路由（时延敏感→小模型，复杂重构→长上下文模型）+ 分级缓存 + 运行沙箱
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Contract Center ====== -->
+  <section class="slide">
+    <span class="tag tag-tech">契约中心</span>
+    <h2>Multi-Agent协同的<span class="gradient-cyan">基础设施</span></h2>
+    <p class="subtitle">解决"上下游不可信、接口歧义多"的痛点</p>
+
+    <div class="card-grid cols-2" style="margin-top: 24px;">
+      <div class="card card-accent-left" style="border-left-color: var(--accent-cyan);">
+        <h4>消费者（调用方）</h4>
+        <p class="text-sm" style="margin-top: 8px;">扫描本域依赖的内部系统</p>
+        <p class="text-sm" style="color: var(--accent-cyan);">推动交易、支付、营销等接口契约标准化</p>
+      </div>
+      <div class="card card-accent-left" style="border-left-color: var(--accent-blue);">
+        <h4>供给方（提供者）</h4>
+        <p class="text-sm" style="margin-top: 8px;">梳理对外暴露的有业务语义的MCP接口</p>
+        <p class="text-sm" style="color: var(--accent-blue);">主动上翻至契约中心，供上游系统调用</p>
+      </div>
+    </div>
+
+    <div class="highlight-box red" style="margin-top: 20px;">
+      <strong>关键判断：</strong>没有契约中心，Agent之间的协作就会退化为"各自为战"。这是Multi-Agent协同的<strong>基础设施</strong>。
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: LAFR Protocol ====== -->
+  <section class="slide">
+    <span class="tag tag-tech">故障排查</span>
+    <h2>L.A.F.R. <span class="gradient-cyan">故障排查协议</span></h2>
+    <p class="subtitle">严禁"暗箱修改"，坚持"文档先行"</p>
+
+    <div class="flow" style="margin: 24px 0;">
+      <div class="flow-step" style="border-color: var(--accent-red);">
+        <h4 style="color: var(--accent-red);">L · Locate</h4>
+        <p class="text-sm">运行沙箱定位缺陷<br>蒙特卡洛优化</p>
+        <p class="text-sm text-muted" style="margin-top: 4px;">错误率降低17%</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color: var(--accent-orange);">
+        <h4 style="color: var(--accent-orange);">A · Analyze</h4>
+        <p class="text-sm">Code Doctor系统<br>静态分析+动态追踪</p>
+        <p class="text-sm text-muted" style="margin-top: 4px;">强制AI输出逻辑推理链</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color: var(--accent-green);">
+        <h4 style="color: var(--accent-green);">F · Fix</h4>
+        <p class="text-sm">文档有误？<br><strong>先修Spec，再重生成代码</strong></p>
+        <p class="text-sm text-muted" style="margin-top: 4px;">严禁黑盒修改代码</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color: var(--accent-blue);">
+        <h4 style="color: var(--accent-blue);">R · Record</h4>
+        <p class="text-sm">错误模式固化至<br>Skill Store</p>
+        <p class="text-sm text-muted" style="margin-top: 4px;">同类问题不二过</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Skill Store & Knowledge ====== -->
+  <section class="slide">
+    <span class="tag tag-tech">知识工程</span>
+    <h2>Skill Store与<span class="gradient-cyan">知识工程四层体系</span></h2>
+
+    <div class="card" style="margin: 20px 0; border-left: 3px solid var(--accent-gold);">
+      <h4 style="color: var(--accent-gold);">示例规则</h4>
+      <p class="text-sm">所有金融交易金额必须强制使用BigDecimal且保留4位小数；任何违反此项的生成请求在编译门禁阶段直接驳回。</p>
+    </div>
+
+    <table style="margin-top: 16px;">
+      <thead>
+        <tr>
+          <th>层级</th>
+          <th>内容</th>
+          <th>治理策略</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>通用层</strong></td>
+          <td>语言标准、框架文档</td>
+          <td>平台自动化维护</td>
+        </tr>
+        <tr>
+          <td><strong>业务中间层</strong></td>
+          <td>公司技术栈、架构规范</td>
+          <td>Skybase等平台提取并保鲜</td>
+        </tr>
+        <tr>
+          <td><strong>业务层</strong></td>
+          <td>项目Spec、架构决策记录</td>
+          <td>各团队持续沉淀</td>
+        </tr>
+        <tr>
+          <td><strong>个人层</strong></td>
+          <td>黑话/偏好</td>
+          <td>开发者与专属Agent交互中自动沉淀</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card-grid cols-2" style="margin-top: 20px;">
+      <div class="card card-accent-top" style="border-top-color: var(--accent-red);">
+        <h4>数据安全红线</h4>
+        <p class="text-sm"><strong>C1-C2（普通逻辑）：</strong>加密传输，代码不落盘，不参与二次训练</p>
+        <p class="text-sm" style="color: var(--accent-red); margin-top: 6px;"><strong>C3（高敏感）：</strong>必须通过私有化模型脱敏处理，严禁喂给外部大模型</p>
+      </div>
+      <div class="card card-accent-top" style="border-top-color: var(--accent-green);">
+        <h4>智能运维应急</h4>
+        <p class="text-sm">AI代码指纹识别 + 精准回滚/切流量/数据修复决策</p>
+        <p class="text-sm" style="color: var(--accent-gold); margin-top: 6px;"><strong>红线：</strong>修复脚本必须人工审核后方可执行</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Summary ====== -->
+  <section class="slide">
+    <span class="tag tag-tech">收束</span>
+    <h2>不是换灯泡，是<span class="gradient-cyan">建新工厂</span></h2>
+
+    <div class="card-grid cols-3" style="margin-top: 32px;">
+      <div class="card" style="text-align: center; padding: 24px;">
+        <h4 style="color: var(--accent-cyan);">工程感知</h4>
+        <p class="text-sm text-muted">给AI地图</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 24px;">
+        <h4 style="color: var(--accent-blue);">Multi-Agent</h4>
+        <p class="text-sm text-muted">给AI分工</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 24px;">
+        <h4 style="color: var(--accent-gold);">契约中心</h4>
+        <p class="text-sm text-muted">给AI规则</p>
+      </div>
+    </div>
+    <div class="card-grid cols-2" style="margin-top: 16px; max-width: 66%; margin-left: auto; margin-right: auto;">
+      <div class="card" style="text-align: center; padding: 24px;">
+        <h4 style="color: var(--accent-red);">LAFR</h4>
+        <p class="text-sm text-muted">给AI纠错流程</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 24px;">
+        <h4 style="color: var(--accent-purple);">Skill Store</h4>
+        <p class="text-sm text-muted">给AI记忆</p>
+      </div>
+    </div>
+
+    <div class="quote-box" style="margin-top: 24px;">
+      一座有知识、有规则、能协作的新工厂。
+    </div>
+  </section>
+
+  <!-- ====== Navigation ====== -->
+  <section class="slide" style="min-height: auto; padding: 40px 100px;">
+    <div class="nav-footer" style="border-top: none;">
+      <a href="02-factory.html">← AI原生工厂</a>
+      <a href="04-why-now.html">为什么是现在 →</a>
+    </div>
+  </section>
+
+  <script src="slides.js"></script>
+</body>
+</html>

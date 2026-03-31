@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI原生研发体系升级 — 我们要建什么</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== Section Break ====== -->
+  <section class="slide section-break">
+    <div class="section-number">02</div>
+    <span class="tag tag-factory">AI原生工厂</span>
+    <h2>我们要建什么：<span class="gradient-blue">AI原生研发工厂</span></h2>
+    <p class="subtitle">5分钟</p>
+  </section>
+
+  <!-- ====== SLIDE: Ultimate Vision ====== -->
+  <section class="slide">
+    <span class="tag tag-factory">终极愿景</span>
+    <h2>用户一句话需求 → <span class="gradient-blue">24小时内自动上线</span></h2>
+    <p class="subtitle">人类全程仅参与3次</p>
+
+    <div class="flow" style="margin: 32px 0;">
+      <div class="flow-step" style="border-color: var(--accent-green);">
+        <h4 style="color: var(--accent-green);">① 确认需求</h4>
+        <p class="text-sm">人类：审定意图、验收条件</p>
+        <p class="text-sm text-muted">AI：自动生成Requirement Spec</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color: var(--accent-blue);">
+        <h4 style="color: var(--accent-blue);">② 架构确认</h4>
+        <p class="text-sm">人类：确认方案、Sign-off</p>
+        <p class="text-sm text-muted">AI：拆解 + 生成Interface/Impl Spec</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color: var(--accent-purple);">
+        <h4 style="color: var(--accent-purple);">③ 预发验收</h4>
+        <p class="text-sm">人类：最终Sign-off</p>
+        <p class="text-sm text-muted">AI：编码→测试→部署→验证</p>
+      </div>
+    </div>
+
+    <div class="highlight-box green">
+      <strong>已验证：</strong>物流已在"碰一下"需求上跑通了从需求读取 → 系分生成 → 代码生成 → CI自动化验证 → 发布评估的全链路。
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Paradigm Shift ====== -->
+  <section class="slide">
+    <span class="tag tag-factory">范式转移</span>
+    <h2>从代码中心 → <span class="gradient-blue">Spec/文档中心</span></h2>
+
+    <div class="vs-grid" style="margin-top: 24px;">
+      <div class="card card-accent-top" style="border-top-color: var(--text-muted);">
+        <h4 class="text-muted">传统研发（代码中心）</h4>
+        <div class="spacer-sm"></div>
+        <table>
+          <tbody>
+            <tr><td><strong>核心资产</strong></td><td>存量源代码、二进制包</td></tr>
+            <tr><td><strong>协作协议</strong></td><td>自然语言、人肉代码评审</td></tr>
+            <tr><td><strong>交付节奏</strong></td><td>天/周级迭代</td></tr>
+            <tr><td><strong>瓶颈点</strong></td><td>编码产出率、人力审查速度</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="vs-divider">→</div>
+
+      <div class="card card-accent-top" style="border-top-color: var(--accent-blue);">
+        <h4 style="color: var(--accent-blue);">AI原生研发（Spec中心）</h4>
+        <div class="spacer-sm"></div>
+        <table>
+          <tbody>
+            <tr><td><strong>核心资产</strong></td><td style="color: var(--accent-cyan);">高质量Spec文档、企业级Skill Store</td></tr>
+            <tr><td><strong>协作协议</strong></td><td style="color: var(--accent-cyan);">文档即协议（SDD）、智能体间通信规范</td></tr>
+            <tr><td><strong>交付节奏</strong></td><td style="color: var(--accent-cyan);">分钟/小时级自动化生成与验证</td></tr>
+            <tr><td><strong>瓶颈点</strong></td><td style="color: var(--accent-cyan);">意图定义精确度、工程感知深度</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <strong>人只做三件事：</strong>定义意图、Sign-off、处理AI无法决策的风险。
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Three Things to Build ====== -->
+  <section class="slide">
+    <span class="tag tag-factory">要建什么</span>
+    <h2>三样<span class="gradient-blue">核心基建</span></h2>
+
+    <div class="card-grid cols-3" style="margin-top: 24px;">
+      <div class="card card-accent-top" style="border-top-color: var(--accent-blue);">
+        <h3 style="color: var(--accent-blue);">Spec范式（SDD-RIPER）</h3>
+        <p>代码可消耗、可重生成，文档才是核心资产</p>
+        <p class="text-sm text-muted" style="margin-top: 12px;">类比：建筑图纸，而非砖头</p>
+      </div>
+
+      <div class="card card-accent-top" style="border-top-color: var(--accent-gold);">
+        <h3 style="color: var(--accent-gold);">契约中心</h3>
+        <p>跨系统调用有据可依，AI不用猜接口</p>
+        <p class="text-sm text-muted" style="margin-top: 12px;">类比：公路上的交通规则</p>
+      </div>
+
+      <div class="card card-accent-top" style="border-top-color: var(--accent-green);">
+        <h3 style="color: var(--accent-green);">三道门禁体系</h3>
+        <p>代码洪流中自动化拦截缺陷</p>
+        <p class="text-sm text-muted" style="margin-top: 12px;">类比：工厂的质检流水线</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Three-Layer Spec ====== -->
+  <section class="slide">
+    <span class="tag tag-factory">三层Spec</span>
+    <h2>三层Spec<span class="gradient-blue">体系</span></h2>
+
+    <div class="card-grid" style="grid-template-columns: 1fr; gap: 16px; margin-top: 24px;">
+      <div class="card card-accent-left" style="border-left-color: var(--accent-green); display: grid; grid-template-columns: 100px 160px 1fr 1fr; align-items: center; gap: 20px;">
+        <div>
+          <span class="badge badge-green">意图层</span>
+        </div>
+        <div><strong>Requirement Spec</strong></div>
+        <div class="text-sm">定义验收标准（AC），消除自然语言歧义</div>
+        <div class="text-sm text-muted">AI理解"为什么做"</div>
+      </div>
+
+      <div class="card card-accent-left" style="border-left-color: var(--accent-blue); display: grid; grid-template-columns: 100px 160px 1fr 1fr; align-items: center; gap: 20px;">
+        <div>
+          <span class="badge" style="background: rgba(79, 109, 245, 0.15); color: var(--accent-blue);">契约层</span>
+        </div>
+        <div><strong>Interface Spec</strong></div>
+        <div class="text-sm">定义JSON Schema，技术隔离墙</div>
+        <div class="text-sm text-muted">编码Agent介入前<strong>必须Sign-off</strong></div>
+      </div>
+
+      <div class="card card-accent-left" style="border-left-color: var(--accent-purple); display: grid; grid-template-columns: 100px 160px 1fr 1fr; align-items: center; gap: 20px;">
+        <div>
+          <span class="badge" style="background: rgba(124, 58, 237, 0.15); color: var(--accent-purple);">施工图层</span>
+        </div>
+        <div><strong>Implementation Spec</strong></div>
+        <div class="text-sm">利用AST预定义技术路径</div>
+        <div class="text-sm text-muted">防止AI盲目修改存量逻辑</div>
+      </div>
+    </div>
+
+    <div class="highlight-box" style="margin-top: 24px;">
+      <strong>为什么Spec这么重要：</strong>有了Spec，代码坏了可以基于Spec重新生成；没有Spec，代码坏了只能人肉考古。Spec让代码从"不可替代"变成<strong>"可再生"</strong>。
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: SDD-RIPER Workflow ====== -->
+  <section class="slide">
+    <span class="tag tag-factory">SDD-RIPER</span>
+    <h2>"先文档后代码"的<span class="gradient-blue">硬性约束</span></h2>
+
+    <div class="flow" style="margin: 24px 0;">
+      <div class="flow-step" style="border-color: var(--accent-cyan);">
+        <h4 style="color: var(--accent-cyan);">R · Research</h4>
+        <p class="text-sm">感知工程背景<br>语义检索定位关联模块</p>
+        <p class="text-sm text-muted" style="margin-top: 6px;">→ 现状分析报告</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color: var(--accent-blue);">
+        <h4 style="color: var(--accent-blue);">I · Innovate</h4>
+        <p class="text-sm">产出三层Spec<br>建立技术铁三角共识</p>
+        <p class="text-sm text-muted" style="margin-top: 6px;">→ 方案对比矩阵</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color: var(--accent-purple);">
+        <h4 style="color: var(--accent-purple);">P · Plan</h4>
+        <p class="text-sm">分解为原子级<br>Action序列</p>
+        <p class="text-sm text-muted" style="margin-top: 6px;">→ Impl Spec + 任务列表</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color: var(--accent-green);">
+        <h4 style="color: var(--accent-green);">E · Execute</h4>
+        <p class="text-sm">按施工图生成代码<br>偏离即回滚</p>
+        <p class="text-sm text-muted" style="margin-top: 6px;">→ 代码 + 测试</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color: var(--accent-gold);">
+        <h4 style="color: var(--accent-gold);">R · Review</h4>
+        <p class="text-sm">另一个AI<br>强批判性自动Review</p>
+        <p class="text-sm text-muted" style="margin-top: 6px;">→ 验收报告</p>
+      </div>
+    </div>
+
+    <div class="card-grid cols-3" style="margin-top: 16px;">
+      <div class="card" style="padding: 16px;">
+        <h4 style="color: var(--accent-green);">理想态</h4>
+        <p class="text-sm">三层Spec完整，AI全链路参与</p>
+      </div>
+      <div class="card" style="padding: 16px;">
+        <h4 style="color: var(--accent-gold);">降级A（当前多数）</h4>
+        <p class="text-sm">意图层人工写，契约层AI辅助，施工图层AI生成</p>
+      </div>
+      <div class="card" style="padding: 16px;">
+        <h4 style="color: var(--accent-red);">红线</h4>
+        <p class="text-sm">无Review不得关闭需求，否则知识断层</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Harness ====== -->
+  <section class="slide">
+    <span class="tag tag-factory">Harness驾具</span>
+    <h2>Harness四大支柱——让AI在<span class="gradient-blue">"围栏"里奔跑</span></h2>
+    <p class="subtitle">AI能力越强，围栏越重要</p>
+
+    <div class="card-grid cols-4" style="margin-top: 20px;">
+      <div class="card card-accent-top" style="border-top-color: var(--accent-cyan); text-align: center;">
+        <div style="font-size: 2em; margin-bottom: 8px;">🗺️</div>
+        <h4>上下文工程</h4>
+        <p class="text-sm text-muted">确保AI拿到完整、准确、最新的信息</p>
+        <p class="text-sm" style="color: var(--accent-cyan); margin-top: 8px;">给AI正确的地图</p>
+      </div>
+      <div class="card card-accent-top" style="border-top-color: var(--accent-blue); text-align: center;">
+        <div style="font-size: 2em; margin-bottom: 8px;">🛤️</div>
+        <h4>架构约束</h4>
+        <p class="text-sm text-muted">硬性规则防止AI越界</p>
+        <p class="text-sm" style="color: var(--accent-blue); margin-top: 8px;">给AI铺好铁轨</p>
+      </div>
+      <div class="card card-accent-top" style="border-top-color: var(--accent-green); text-align: center;">
+        <div style="font-size: 2em; margin-bottom: 8px;">🛑</div>
+        <h4>反馈循环</h4>
+        <p class="text-sm text-muted">自动化验证+快速纠偏</p>
+        <p class="text-sm" style="color: var(--accent-green); margin-top: 8px;">给AI装上刹车</p>
+      </div>
+      <div class="card card-accent-top" style="border-top-color: var(--accent-purple); text-align: center;">
+        <div style="font-size: 2em; margin-bottom: 8px;">📹</div>
+        <h4>生命周期管理</h4>
+        <p class="text-sm text-muted">从需求到运维全链路追踪</p>
+        <p class="text-sm" style="color: var(--accent-purple); margin-top: 8px;">给AI配备行车记录仪</p>
+      </div>
+    </div>
+
+    <div class="highlight-box green" style="margin-top: 20px;">
+      <strong>实战数据：</strong>就业团队的架构约束Linter首版已发现 <span style="color: var(--accent-green); font-weight: 700; font-size: 1.2em;">80+问题</span> ——过去靠人工Review"偶然发现"，现在被系统性拦截。
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Three Gates ====== -->
+  <section class="slide">
+    <span class="tag tag-factory">三道门禁</span>
+    <h2>三道<span class="gradient-blue">硬性质量门禁</span></h2>
+    <p class="subtitle">所有AI生成产物必须过三关，任何一关不过则打回</p>
+
+    <div class="pipeline" style="margin: 24px 0;">
+      <div class="pipeline-stage">需求</div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-gate">门禁1：Spec审查</div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-stage">架构设计</div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-gate">门禁2：架构约束检测</div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-stage">编码</div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-gate">门禁3：自动化测试验收</div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-stage">上线</div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>门禁</th>
+          <th>检查内容</th>
+          <th>通过标准</th>
+          <th>耗时目标</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong style="color: var(--accent-gold);">① Spec审查</strong></td>
+          <td>需求完整性、AC可测试性、技术方案可行性</td>
+          <td>三层Spec完整 + 架构师Sign-off</td>
+          <td>&lt;4小时</td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--accent-blue);">② 架构约束</strong></td>
+          <td>语法正确性、分层依赖、接口Schema一致</td>
+          <td>Harness规则全通过</td>
+          <td>&lt;10分钟</td>
+        </tr>
+        <tr>
+          <td><strong style="color: var(--accent-green);">③ 测试验收</strong></td>
+          <td>增量覆盖率、契约测试、字段偏差检测</td>
+          <td>行覆盖率达标 + 契约0偏差</td>
+          <td>&lt;30分钟</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box gold" style="margin-top: 20px;">
+      <strong>方向不对，后面再严也没用。</strong>门禁1是"方向判断"，必须人工+AI共同决策；门禁2、3逐步自动化，释放人工带宽。
+    </div>
+
+    <div class="highlight-box red" style="margin-top: 8px;">
+      <strong>红线：</strong>门禁3的"字段偏差阻断"不可降级，防止数据事故。
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Summary ====== -->
+  <section class="slide">
+    <span class="tag tag-factory">收束</span>
+    <h2>一座完整的<span class="gradient-blue">AI原生工厂</span></h2>
+
+    <div class="card-grid cols-4" style="margin-top: 32px;">
+      <div class="card" style="text-align: center; padding: 32px 20px;">
+        <div style="font-size: 2.5em; margin-bottom: 12px;">📐</div>
+        <h4>Spec</h4>
+        <p class="text-sm text-muted">定义边界</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 32px 20px;">
+        <div style="font-size: 2.5em; margin-bottom: 12px;">🔧</div>
+        <h4>Harness</h4>
+        <p class="text-sm text-muted">构建围栏</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 32px 20px;">
+        <div style="font-size: 2.5em; margin-bottom: 12px;">🚧</div>
+        <h4>三道门禁</h4>
+        <p class="text-sm text-muted">把关产物</p>
+      </div>
+      <div class="card" style="text-align: center; padding: 32px 20px;">
+        <div style="font-size: 2.5em; margin-bottom: 12px;">🔄</div>
+        <h4>RIPER</h4>
+        <p class="text-sm text-muted">保证过程</p>
+      </div>
+    </div>
+
+    <div class="quote-box" style="margin-top: 32px;">
+      每个核心机制都有理想态和降级方案，确保可落地。这不是蓝图，是施工图。
+    </div>
+  </section>
+
+  <!-- ====== Navigation ====== -->
+  <section class="slide" style="min-height: auto; padding: 40px 100px;">
+    <div class="nav-footer" style="border-top: none;">
+      <a href="01-problem.html">← 问题定位</a>
+      <a href="03-tech-depth.html">技术纵深 →</a>
+    </div>
+  </section>
+
+  <script src="slides.js"></script>
+</body>
+</html>

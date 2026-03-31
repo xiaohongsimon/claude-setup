@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI原生研发体系升级 — 行动与风险</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== Section Break ====== -->
+  <section class="slide section-break">
+    <div class="section-number">07</div>
+    <span class="tag tag-action">行动 & 风险</span>
+    <h2>需要的支持与<span class="gradient-orange">关键行动</span></h2>
+    <p class="subtitle">1分钟</p>
+  </section>
+
+  <!-- ====== SLIDE: Key Dependencies ====== -->
+  <section class="slide">
+    <span class="tag tag-action">关键依赖</span>
+    <h2>关键<span class="gradient-orange">依赖清单</span></h2>
+
+    <table style="margin-top: 24px;">
+      <thead>
+        <tr>
+          <th>支持项</th>
+          <th>期望时间</th>
+          <th>优先级</th>
+          <th>当前风险</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>契约中心建设</strong>（非行业域接口封装）</td>
+          <td>Q2</td>
+          <td><span class="badge badge-p0">P0</span></td>
+          <td><span class="risk-dot yellow"></span>跨域协调难</td>
+        </tr>
+        <tr>
+          <td><strong>三层门禁详细设计方案</strong></td>
+          <td>5.15前</td>
+          <td><span class="badge badge-p0">P0</span></td>
+          <td><span class="risk-dot yellow"></span>技术可控</td>
+        </tr>
+        <tr>
+          <td><strong>本地CI环境</strong>（基于契约中心）</td>
+          <td>6.30前</td>
+          <td><span class="badge badge-p0">P0</span></td>
+          <td><span class="risk-dot red"></span>资源不足，需新增8人</td>
+        </tr>
+        <tr>
+          <td><strong>Harness规则引擎</strong></td>
+          <td>持续</td>
+          <td><span class="badge badge-p0">P0</span></td>
+          <td><span class="risk-dot green"></span>就业已出首版</td>
+        </tr>
+        <tr>
+          <td><strong>知识工程平台选型</strong>（Skybase）</td>
+          <td>5月中旬前</td>
+          <td><span class="badge badge-p1">P1</span></td>
+          <td><span class="risk-dot yellow"></span>待决策</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ====== SLIDE: Key Actions ====== -->
+  <section class="slide">
+    <span class="tag tag-action">关键行动</span>
+    <h2>关键<span class="gradient-orange">行动项</span></h2>
+
+    <table style="margin-top: 24px;">
+      <thead>
+        <tr>
+          <th>行动项</th>
+          <th>负责人</th>
+          <th>时间节点</th>
+          <th>优先级</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>跑通服务端+质量L3闭环链路</td>
+          <td>宗翰</td>
+          <td><strong style="color: var(--accent-red);">4月30日</strong></td>
+          <td><span class="badge badge-p0">P0</span></td>
+        </tr>
+        <tr>
+          <td>明确L3需求闭环数量目标及统计口径</td>
+          <td>宗翰</td>
+          <td>会后一周内</td>
+          <td><span class="badge badge-p0">P0</span></td>
+        </tr>
+        <tr>
+          <td>输出三层质量门禁详细设计方案</td>
+          <td>质量-宗翰</td>
+          <td>5月15日前</td>
+          <td><span class="badge badge-p0">P0</span></td>
+        </tr>
+        <tr>
+          <td>构建基于契约中心的Local CICD环境</td>
+          <td>章邯团队</td>
+          <td>6月30日前</td>
+          <td><span class="badge badge-p0">P0</span></td>
+        </tr>
+        <tr>
+          <td>启动历史决策与隐性知识追溯专项</td>
+          <td>行业各先锋队</td>
+          <td>5月初</td>
+          <td><span class="badge badge-p1">P1</span></td>
+        </tr>
+        <tr>
+          <td>推动Skybase与能力中心选型决策</td>
+          <td>平台侧</td>
+          <td>5月中旬前</td>
+          <td><span class="badge badge-p1">P1</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box orange" style="margin-top: 20px;">
+      <strong>"谁Sign-off，谁负责。"</strong>AI只是工具，人类工程师作为最终决策者，必须对签署通过的文档与代码负全部法律与工程责任。
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Risks ====== -->
+  <section class="slide slide-compact">
+    <span class="tag tag-action">风险应对</span>
+    <h2>风险与<span class="gradient-orange">应对策略</span></h2>
+
+    <table style="margin-top: 20px; font-size: 0.88em;">
+      <thead>
+        <tr>
+          <th>风险</th>
+          <th>影响</th>
+          <th>应对策略</th>
+          <th>降级方案</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>上下文腐烂</strong></td>
+          <td>代码质量下降</td>
+          <td>完善工程感知中枢 + Spec变更触发下游通知</td>
+          <td>人工Review兜底关键模块</td>
+        </tr>
+        <tr>
+          <td><strong>审查瘫痪</strong></td>
+          <td>质量风险激增</td>
+          <td>三层门禁自动化拦截80%问题</td>
+          <td>人工聚焦架构级审查</td>
+        </tr>
+        <tr>
+          <td><strong>维护断层</strong></td>
+          <td>可维护性丧失</td>
+          <td>Spec先行 + 强制ADR记录</td>
+          <td>关键模块保留人工编码</td>
+        </tr>
+        <tr>
+          <td><strong>生产风险</strong></td>
+          <td>线上故障</td>
+          <td>Harness工程化 + LAFR协议</td>
+          <td>灰度发布 + 自动回滚</td>
+        </tr>
+        <tr>
+          <td><strong>团队抵触</strong></td>
+          <td>执行变形</td>
+          <td>角色升级路径 + "Spec架构师"认证</td>
+          <td>渐进推广，不强制一步到位</td>
+        </tr>
+        <tr>
+          <td><strong>模型能力波动</strong></td>
+          <td>产出不稳定</td>
+          <td>Harness约束+门禁兜底，不依赖单一模型</td>
+          <td>降级回L2人工辅助模式</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box red" style="margin-top: 20px;">
+      <strong>止损退出策略：</strong>若Q3里程碑全面未达标，保留2个深度样板间（出行+缴费），其他回退L2，确保"有成果可演示"而非"全面铺开无闭环"。
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Ultimate Vision ====== -->
+  <section class="slide">
+    <span class="tag tag-action">终极愿景</span>
+    <h2>一人公司：<span class="gradient-orange">虚拟数字团队</span></h2>
+    <p class="subtitle">一个工程师配合AI Agent团队可端到端交付完整产品模块</p>
+
+    <div class="card" style="margin: 24px auto; max-width: 700px; padding: 32px; background: var(--bg-secondary); font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 0.9em; line-height: 2;">
+      <div style="color: var(--accent-gold);">CEO语音指令："你好，闪电"</div>
+      <div style="color: var(--text-muted);">    ↓</div>
+      <div style="color: var(--accent-cyan);">ALICE 接收并理解 Spec 指令</div>
+      <div style="color: var(--text-muted);">    ↓</div>
+      <div style="color: var(--accent-blue);">数字团队协同执行</div>
+      <div style="color: var(--text-muted); padding-left: 20px;">├── 需求组 → 分析组 → 实现组 → 验证组 → 发布组</div>
+      <div style="color: var(--text-muted); padding-left: 20px;">└── 审计组全程监控</div>
+      <div style="color: var(--text-muted);">    ↓</div>
+      <div style="color: var(--accent-purple);">进度追踪、任务看板、质量管控</div>
+      <div style="color: var(--text-muted);">    ↓</div>
+      <div style="color: var(--accent-green);">生产环境已部署上线 ✓</div>
+    </div>
+
+    <div class="highlight-box green">
+      <strong>这不是裁员逻辑，而是放大逻辑</strong>——同样的团队规模，能交付3-5倍的业务价值。
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Closing ====== -->
+  <section class="slide title-slide">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+
+    <div class="quote-box" style="max-width: 800px; margin: 0 auto 32px; font-size: 1.3em; border-left-color: var(--accent-gold);">
+      我们有了电。每个工位上的灯已经亮了。现在的问题是——我们是继续在手工作坊里用电灯照明，还是重新设计一座电气化工厂？
+    </div>
+
+    <h2>选择后者，需要您今天的<span class="gradient-gold">三个决策</span>。</h2>
+    <p class="subtitle" style="margin-top: 16px;">4月30日，我们交出第一个AI原生工厂的样板间。</p>
+  </section>
+
+  <!-- ====== Navigation ====== -->
+  <section class="slide" style="min-height: auto; padding: 40px 100px;">
+    <div class="nav-footer" style="border-top: none;">
+      <a href="06-progress.html">← 当前进展</a>
+      <a href="08-appendix.html">附录Q&A →</a>
+    </div>
+  </section>
+
+  <script src="slides.js"></script>
+</body>
+</html>

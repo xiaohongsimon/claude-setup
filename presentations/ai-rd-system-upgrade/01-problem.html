@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI原生研发体系升级 — 问题定位</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== SLIDE: Section Break ====== -->
+  <section class="slide section-break">
+    <div class="section-number">01</div>
+    <span class="tag tag-problem">问题定位</span>
+    <h2>个体生产力 <span class="gradient-red">≠</span> 组织迭代力</h2>
+    <p class="subtitle">3分钟</p>
+  </section>
+
+  <!-- ====== SLIDE: Core Thesis ====== -->
+  <section class="slide">
+    <span class="tag tag-problem">问题定位</span>
+    <h2>一句话<span class="gradient-red">开场</span></h2>
+
+    <div class="quote-box" style="margin: 40px 0; font-size: 1.3em;">
+      我们的工程师已经拿到了AI超能力，但组织还在用手工作坊的管理方式。<br>
+      个体效率提升3-5倍，组织交付效能几乎没变。
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Individual vs Org ====== -->
+  <section class="slide">
+    <span class="tag tag-problem">问题定位</span>
+    <h2>超级个体 vs <span class="gradient-red">组织困境</span></h2>
+
+    <table style="margin-top: 24px;">
+      <thead>
+        <tr>
+          <th style="width: 45%;">超级个体今天的体验</th>
+          <th style="width: 55%;">放到组织里发生了什么</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>一句话让AI生成一个函数，秒出</td>
+          <td style="color: var(--accent-red);">100人同时生成 → 代码洪流淹没审查能力</td>
+        </tr>
+        <tr>
+          <td>AI帮我理解当前这个文件</td>
+          <td style="color: var(--accent-red);">百万行代码库，AI记不住全局，改A漏B</td>
+        </tr>
+        <tr>
+          <td>我自己跑一下能通就行</td>
+          <td style="color: var(--accent-red);">跨系统联调接口不一致，上下游互相甩锅</td>
+        </tr>
+        <tr>
+          <td>出了bug我自己修</td>
+          <td style="color: var(--accent-red);">AI写的代码3个月后连作者都看不懂</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box red" style="margin-top: 24px;">
+      <strong>关键矛盾：</strong>AI让每个人都成了10倍速打字员，但如果工厂不升级，10倍速打字只是10倍速制造混乱。
+    </div>
+  </section>
+
+  <!-- ====== SLIDE: Three Structural Risks ====== -->
+  <section class="slide">
+    <span class="tag tag-problem">问题定位</span>
+    <h2>三大<span class="gradient-red">结构性风险</span>（已经在发生）</h2>
+
+    <div class="card-grid cols-3" style="margin-top: 24px;">
+      <div class="card card-accent-top" style="border-top-color: var(--accent-red);">
+        <h3 style="color: var(--accent-red);">审查瘫痪</h3>
+        <p>AI瞬间生成海量代码，人类无法逐行Review。工程师被迫"盲目合并"，技术债以指数级积累。</p>
+        <p class="text-sm text-muted" style="margin-top: 8px;">传统CR机制在AI产出速度面前已宣告破产</p>
+      </div>
+
+      <div class="card card-accent-top" style="border-top-color: var(--accent-orange);">
+        <h3 style="color: var(--accent-orange);">上下文腐烂</h3>
+        <p>AI处理超长对话时注意力分散，缺乏项目全局视角。"只见树木不见森林"，修改一个模块破坏另一个模块的隐含依赖。</p>
+        <p class="text-sm text-muted" style="margin-top: 8px;">百万行级遗留系统的致命问题</p>
+      </div>
+
+      <div class="card card-accent-top" style="border-top-color: var(--accent-gold);">
+        <h3 style="color: var(--accent-gold);">维护断层</h3>
+        <p>全由AI生成且缺乏文档锚定的代码，数月后出现Bug时人类看不懂，新AI也无法接手。</p>
+        <p class="text-sm text-muted" style="margin-top: 8px;">"能跑但不敢动"，代码变成一次性产物</p>
+      </div>
+    </div>
+
+    <div class="highlight-box" style="margin-top: 24px;">
+      <strong>收束：</strong>这三个风险不是技术问题，是<strong>组织生产关系没有适配新生产力</strong>的问题。
+    </div>
+  </section>
+
+  <!-- ====== Navigation ====== -->
+  <section class="slide" style="min-height: auto; padding: 40px 100px;">
+    <div class="nav-footer" style="border-top: none;">
+      <a href="00-opening.html">← 开篇</a>
+      <a href="02-factory.html">AI原生工厂 →</a>
+    </div>
+  </section>
+
+  <script src="slides.js"></script>
+</body>
+</html>
