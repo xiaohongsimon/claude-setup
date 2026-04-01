@@ -47,6 +47,35 @@
     "command": "~/.claude/statusline.sh"
   },
 
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/notify-dingtalk.sh",
+            "timeout": 15,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/notify-dingtalk.sh",
+            "timeout": 15,
+            "async": true
+          }
+        ]
+      }
+    ]
+  },
+
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true
   }

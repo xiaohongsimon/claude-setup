@@ -97,6 +97,16 @@ Claude Code 事件 → 钉钉单聊推送：
 - 免打扰时段：23:30 ~ 07:30
 - 密钥从 `~/.dynasty.env` 加载
 
+**配置：**
+1. 创建 `~/.dynasty.env`：
+   ```
+   DINGTALK_APP_KEY=your_app_key
+   DINGTALK_APP_SECRET=your_app_secret
+   DINGTALK_STAFF_ID=your_staff_id
+   DINGTALK_ROBOT_CODE=your_robot_code  # 可选，默认等于 APP_KEY
+   ```
+2. 在 `settings.json` 中添加 `Notification` 和 `Stop` hooks（见模板）
+
 ## Dependencies / 依赖
 
 - [Ghostty](https://ghostty.org/)
